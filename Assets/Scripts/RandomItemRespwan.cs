@@ -19,7 +19,7 @@ public class RandomItemRespwan : MonoBehaviour {
     public GameObject[] hellitem;
     public GameObject hellitem1;
     public GameObject hellitem2;
-    public GameObject hellitem3;
+    //public GameObject hellitem3;
 
     public GameObject[] drink;
     public GameObject drink1;
@@ -53,15 +53,15 @@ public class RandomItemRespwan : MonoBehaviour {
             var n = HellmetRandomitem();
             if (n == 1)
             {
-                hellet[i]= Instantiate(hellmet1, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                hellet[i]= Instantiate(hellmet1, new Vector3(Random.Range(-60,60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 2)
             {
-                hellet[i] = Instantiate(hellmet2, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                hellet[i] = Instantiate(hellmet2, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 3)
             {
-                hellet[i] = Instantiate(hellmet3, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                hellet[i] = Instantiate(hellmet3, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
         }
        weapon = new GameObject[weapoarrysize];  //무기 배열
@@ -70,23 +70,23 @@ public class RandomItemRespwan : MonoBehaviour {
             var n = WeaponRandomitem();
             if (n == 1)
             {
-                weapon[i]= Instantiate(weapontype1, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                weapon[i]= Instantiate(weapontype1, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 2)
             {
-                weapon[i] = Instantiate(weapontype2, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                weapon[i] = Instantiate(weapontype2, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 3)
             {
-                weapon[i] = Instantiate(weapontype3, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                weapon[i] = Instantiate(weapontype3, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 4)
             {
-                weapon[i] = Instantiate(weapontype4, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                weapon[i] = Instantiate(weapontype4, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 5)
             {
-                weapon[i] = Instantiate(weapontype5, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                weapon[i] = Instantiate(weapontype5, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
         }
 
@@ -96,16 +96,16 @@ public class RandomItemRespwan : MonoBehaviour {
             var n = HellitemRandomitem();
             if (n == 1)
             {
-                hellitem[i] = Instantiate(hellitem1, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                hellitem[i] = Instantiate(hellitem1, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 2)
             {
-                hellitem[i] = Instantiate(hellitem2, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                hellitem[i] = Instantiate(hellitem2, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
-            if (n == 3)
-            {
-                hellitem[i] = Instantiate(hellitem3, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
-            }
+            //if (n == 3)
+            //{
+            //    hellitem[i] = Instantiate(hellitem3, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
+            //}
         }
        drink = new GameObject[drinkarrysize]; //드링크아이템 배열
         for (int i = 0; i < drinkarrysize; i++)
@@ -113,11 +113,11 @@ public class RandomItemRespwan : MonoBehaviour {
             var n = drinkRandomitem();
             if (n == 1)
             {
-                drink[i] = Instantiate(drink1, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                drink[i] = Instantiate(drink1, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
             if (n == 2)
             {
-                drink[i] = Instantiate(drink2, new Vector3(Random.Range(-49, 49), 20, Random.Range(-74, 74)), transform.rotation);
+                drink[i] = Instantiate(drink2, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
           
         }
@@ -183,11 +183,11 @@ public class RandomItemRespwan : MonoBehaviour {
     {
         var Ranint = 0;
         var num = Random.Range(0, 10);
-        if (num <= 1)
-        {
-            Ranint = 3;
-        }
-        if (num > 1 && num <= 4)
+        //if (num <= 1)
+        //{
+        //    Ranint = 3;
+        //}
+        if (num >= 1 && num <= 4)
         {
             Ranint = 2;
         }

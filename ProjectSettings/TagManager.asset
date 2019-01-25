@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Map
+  - hellitem1
+  - hellitem2
+  - drink1
+  - drink2
   layers:
   - Default
   - TransparentFX
