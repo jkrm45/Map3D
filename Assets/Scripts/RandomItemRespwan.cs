@@ -10,6 +10,7 @@ public class RandomItemRespwan : MonoBehaviour {
     public GameObject weapontype3;
     public GameObject weapontype4;
     public GameObject weapontype5;
+    public GameObject weapontype6;
 
     public GameObject[] hellet;
     public GameObject hellmet1;
@@ -32,21 +33,6 @@ public class RandomItemRespwan : MonoBehaviour {
     public int drinkarrysize = 30;
 
     void Start () {
-        //item = new List<GameObject>();
-        //AssetBundle myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "item"));
-        //if (myLoadedAssetBundle == null)
-
-        //{
-
-        //    Debug.Log("파일로드");
-
-        //    return;
-
-        //}
-        //GameObject prefab = myLoadedAssetBundle.LoadAsset<GameObject>("Box2"); //프리팹이름 
-        //item.Add(prefab);
-
-        //Instantiate(item2, new Vector3(Random.Range(-34,4.5f),Random.Range(-30,8.8f),0),transform.rotation);
         hellet = new GameObject[helletarrysize]; //핼맻 배열
         for (int i = 0; i < helletarrysize; i++)
         {
@@ -87,6 +73,10 @@ public class RandomItemRespwan : MonoBehaviour {
             if (n == 5)
             {
                 weapon[i] = Instantiate(weapontype5, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
+            }
+            if (n == 6)
+            {
+                weapon[i] = Instantiate(weapontype6, new Vector3(Random.Range(-60, 60), 20, Random.Range(-80, 80)), transform.rotation);
             }
         }
 
@@ -153,7 +143,7 @@ public class RandomItemRespwan : MonoBehaviour {
     int WeaponRandomitem()  //무기 종류별 확률
     {
         var Ranint = 0;
-        var num = Random.Range(0, 10);
+        var num = Random.Range(0, 12);
         if (num >= 0&&num<=1)
         {
             Ranint = 5;
@@ -174,6 +164,10 @@ public class RandomItemRespwan : MonoBehaviour {
         {
             Ranint = 1;
         }
+        if (num >= 10 && num <=12)
+        {
+            Ranint = 6;
+        }
 
         return Ranint;
     }
@@ -183,10 +177,6 @@ public class RandomItemRespwan : MonoBehaviour {
     {
         var Ranint = 0;
         var num = Random.Range(0, 10);
-        //if (num <= 1)
-        //{
-        //    Ranint = 3;
-        //}
         if (num >= 1 && num <= 4)
         {
             Ranint = 2;

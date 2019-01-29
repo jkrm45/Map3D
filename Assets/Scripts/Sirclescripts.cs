@@ -91,17 +91,5 @@ public class Sirclescripts : MonoBehaviour
 
     }
 
-  //int FirstsircleposionX()
-  //  {
-  //      int x;
-  //      x = Random.Range(-40, 40);
-  //      return x;
-  //  }
-  //int FirstsircleposionZ()
-  //  {
-  //      int z;
-  //     z = Random.Range(-60, 60);
-  //      return z;
-  //  }
 
 }
