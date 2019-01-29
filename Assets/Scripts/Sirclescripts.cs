@@ -28,7 +28,7 @@ public class Sirclescripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (first == true)
+        if (first == true)//첫번째
         {
             sirclecooltime = sirclecooltime + Time.deltaTime;
             if (sirclecooltime > firstsirclecool)
@@ -43,7 +43,7 @@ public class Sirclescripts : MonoBehaviour
 
             }
         }
-        if (scond == true)
+        if (scond == true)//두번째
         {
             sirclecooltime = sirclecooltime + Time.deltaTime;
             if (sirclecooltime > scondsirclecool)
@@ -90,6 +90,7 @@ public class Sirclescripts : MonoBehaviour
 
 
     }
+
 
 
 }

@@ -18,6 +18,7 @@ TagManager:
   - weapon3
   - weapon4
   - weapon5
+  - damagezone
   layers:
   - Default
   - TransparentFX
