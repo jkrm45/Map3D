@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Sirclescripts : MonoBehaviour
 {
     public float firstsirclecool;
@@ -37,6 +38,7 @@ public class Sirclescripts : MonoBehaviour
                 if (sircle.transform.localScale.x < 0.1)
                 {
                     sircle.GetComponent<Transform>().localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                    //fistpositon.position=new Vector3(fistpositon-(Random))
                     first = false;
                     scond = true;
                 }
