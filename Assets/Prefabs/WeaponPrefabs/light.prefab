@@ -11,12 +11,9 @@ GameObject:
   - component: {fileID: 5168886998148941494}
   - component: {fileID: 78171013617794972}
   - component: {fileID: 8201530616408530974}
-  - component: {fileID: 8177691335627388957}
-  - component: {fileID: 4248289670012069410}
-  - component: {fileID: 6492521765038835115}
   m_Layer: 0
   m_Name: Staff00_mesh(Clone)
-  m_TagString: item
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,51 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8177691335627388957
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738086270962539043}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &4248289670012069410
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738086270962539043}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.123471394, y: 1.4081105, z: 0.13413963}
-  m_Center: {x: 0, y: 0.70409113, z: 0.003946375}
---- !u!114 &6492521765038835115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738086270962539043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0078ae97bfeeed49aaf64e4ea75966a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 4900000, guid: b41a1a43b89b9e647867b75725ab71ae, type: 3}
-  itemname: lightning staff
-  index: 0
-  bullet: 0
 --- !u!1 &6562962116354669033
 GameObject:
   m_ObjectHideFlags: 0

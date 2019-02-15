@@ -17,17 +17,47 @@ public class Circle : MonoBehaviour
     public float sirclecooltime;
     public Vector3 before;
     public Vector3 after;
+    public PhotonView pv;
+    public bool gamestart;
+
     // Start is called before the first frame update
     void Start()
     {
+        pv = PhotonView.Get(this);
         circle = GameObject.Find("DamageZone");
         circle2 = GameObject.Find("DamageZone1");
         Newposion();
     }
     void Update()
     {
+        if (PhotonNetwork.connected && gamestart == true)
+        {
+            Deadzone();
+        }
+    }
+    
+    void Newposion()
+    {
+        float range = (circle.transform.localScale.x - circle2.transform.localScale.x) / 2 *1250; 
+        float radius = Random.Range(0, range);
+        float rad = Random.Range(0, Mathf.PI* 2);
+        float newx = radius* Mathf.Cos(rad);
+        float newy = radius*Mathf.Sin(rad);
+        circle2.transform.position = circle.transform.position + new Vector3(newx, 0, newy);
+    }
+    void Deadzone()
+    {
+        StartCoroutine(Circlemoving());
+        pv.RPC("CmRPC", PhotonTargets.Others);
+    }
+    [PunRPC]
+    void CmRPC()
+    {
+        StartCoroutine(Circlemoving());
+    }
+    IEnumerator Circlemoving()
+    {
         sirclecooltime = sirclecooltime + Time.deltaTime;
-
         if (first == true)//첫번째
         {
             if (sirclecooltime > firstsirclecool)
@@ -48,7 +78,7 @@ public class Circle : MonoBehaviour
             if (sirclecooltime > scondsirclecool)
             {
                 StartCoroutine(Movenextdeadzone());
-                if (circle.transform.localScale.x <=0.055)
+                if (circle.transform.localScale.x <= 0.055)
                 {
                     Debug.Log("!!!");
                     circle2 = GameObject.Find("DamageZone3");
@@ -80,18 +110,9 @@ public class Circle : MonoBehaviour
                 StartCoroutine(Movenextdeadzone());
             }
         }
+        yield return null;
     }
-    void Newposion()
-    {
-        float range = (circle.transform.localScale.x - circle2.transform.localScale.x) / 2 *1250; 
-        float radius = Random.Range(0, range);
-        float rad = Random.Range(0, Mathf.PI* 2);
-        float newx = radius* Mathf.Cos(rad);
-        float newy = radius*Mathf.Sin(rad);
-        circle2.transform.position = circle.transform.position + new Vector3(newx, 0, newy);
-    }
-
-  IEnumerator Movenextdeadzone()
+    IEnumerator Movenextdeadzone()
     {
         Vector3 ori = circle.transform.localScale;
         Vector3 bb = (circle2.transform.localScale - circle.transform.localScale);
@@ -102,7 +123,24 @@ public class Circle : MonoBehaviour
         {
             circle.transform.position = before + i * aa;
             circle.transform.localScale = ori + i * bb;
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
+        }
+    }
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(gamestart);
+            stream.SendNext(sirclecooltime);
+            stream.SendNext(circle.transform.position);
+            stream.SendNext(circle2.transform.position);
+        }
+        else
+        {
+            gamestart = (bool)stream.ReceiveNext();
+            sirclecooltime =(float)stream.ReceiveNext();
+            circle.transform.position = (Vector3)stream.ReceiveNext();
+            circle2.transform.position = (Vector3)stream.ReceiveNext();
         }
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83570121784531366}
   - component: {fileID: 83570121784531367}
+  - component: {fileID: 311975727}
   m_Layer: 0
   m_Name: BlueZone
   m_TagString: Untagged
@@ -50,10 +51,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circle: {fileID: 0}
   circle2: {fileID: 0}
-  firstsirclecool: 2
-  scondsirclecool: 20
-  thirdsirclecool: 40
-  fourhsirclecool: 60
+  firstsirclecool: 60
+  scondsirclecool: 120
+  thirdsirclecool: 180
+  fourhsirclecool: 240
   first: 1
   scond: 0
   third: 0
@@ -61,6 +62,34 @@ MonoBehaviour:
   sirclecooltime: 0
   before: {x: 0, y: 0, z: 0}
   after: {x: 0, y: 0, z: 0}
+  pv: {fileID: 0}
+--- !u!114 &311975727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83570121784531364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 1
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 83570121784531367}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1001 &83570120784556409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,18 +296,6 @@ PrefabInstance:
     - target: {fileID: 4777780419603674, guid: dd68423548c16c047ac1ea1abf44e810, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4777780419603674, guid: dd68423548c16c047ac1ea1abf44e810, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4777780419603674, guid: dd68423548c16c047ac1ea1abf44e810, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4777780419603674, guid: dd68423548c16c047ac1ea1abf44e810, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd68423548c16c047ac1ea1abf44e810, type: 3}

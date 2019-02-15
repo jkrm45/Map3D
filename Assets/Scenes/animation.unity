@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &133109304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7679478861292915549, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 974190264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &719361234
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +208,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &958488279
+--- !u!1001 &974190264
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -213,11 +219,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 196394, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
       propertyPath: m_Name
-      value: Character_Soldier_01_Blue
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 483780, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483780, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -245,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 483780, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 483780, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -259,10 +265,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9587140, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 5095099185191232688, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095099185191232688, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: instantiationId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967801489624426227, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: weaponlook.Array.data[7]
       value: 
-      objectReference: {fileID: 9100000, guid: 7dab5d0246735d74481c78c8ef6ef719, type: 2}
+      objectReference: {fileID: 133109304}
+    - target: {fileID: 8667217217954246497, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810489277981649971, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467352992170966005, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486061804587062851, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016380387813305636, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757602258441089791, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316318562157933196, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ca6a3953ccc4397f5f35d2aa0a6d, type: 3}
 --- !u!1 &1380068586

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 60a1e845c5fc1da4f8351003444caa64
+labels:
+- Weapon
+- Bow
+- Crossbow
+- Arrow
+- Ranged
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

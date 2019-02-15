@@ -9,7 +9,6 @@ TagManager:
   - hellitem2
   - drink1
   - drink2
-  - item
   - helmet1
   - helmet2
   - helmet3
@@ -19,6 +18,14 @@ TagManager:
   - weapon4
   - weapon5
   - damagezone
+  - Beam
+  - Fire
+  - Item
+  - Enemy
+  - Enemybullet
+  - Playerbullet
+  - item
+  - Ring
   layers:
   - Default
   - TransparentFX
